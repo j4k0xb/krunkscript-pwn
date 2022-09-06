@@ -9,6 +9,8 @@
 // ==/UserScript==
 
 const originalParse = JSON.parse;
+const iframe = document.createElement('iframe');
+document.body.appendChild(iframe);
 
 setTimeout(() => {
   JSON.parse = text => {
@@ -25,5 +27,5 @@ async function deobfuscate(script) {
     method: 'POST',
     body: script,
   });
-  console.log(await response.text());
+  iframe.contentWindow.console.log(await response.text());
 }
