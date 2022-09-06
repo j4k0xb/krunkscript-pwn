@@ -8,9 +8,10 @@ Deobfuscate and beautify compiled KrunkScript
 
 ## Usage
 
-1. Install the [userscript](https://github.com/j4k0xb/krunkscript-deobfuscator/raw/master/script.user.js).
-2. Open the browser console and join a map with scripts
-3. The deobfuscated code will be logged
+1. Install [Tampermonkey](http://www.tampermonkey.net) for your browser
+2. Add the [userscript](https://github.com/j4k0xb/krunkscript-deobfuscator/raw/master/script.user.js).
+3. Open the browser console and join a map with scripts
+4. The deobfuscated code will be logged
 
 ## API
 
