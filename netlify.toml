@@ -1,0 +1,21 @@
+[functions]
+directory = 'src/api'
+
+[[redirects]]
+force = true
+from = '/api/*'
+status = 200
+to = '/.netlify/functions/:splat'
+
+[[redirects]]
+from = '/*'
+status = 200
+to = '/index.html'
+
+[build]
+command = 'npm run build'
+environment = {NODE_VERSION = '16'}
+publish = 'dist'
+
+[dev]
+autoLaunch = false

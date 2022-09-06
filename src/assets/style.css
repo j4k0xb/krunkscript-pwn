@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "krunker";
+  src: url(./font2.ttf);
+  font-display: swap;
+}
+
+:root {
+  --color-primary: hsl(154 48% 49%);
+  --color-accent: hsl(154 48% 39%);
+  --color-fg: #c9d1d9;
+  --color-bg: hsl(215, 28%, 7%);
+  --color-canvas: hsl(215, 21%, 11%);
+  --color-btn: hsl(215, 20%, 20%);
+  --color-btn-hover: hsl(215, 20%, 25%);
+  --color-btn-active: hsl(215, 20%, 30%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 30px;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+header {
+  display: inline;
+  text-align: center;
+  font-family: krunker;
+  font-size: 2rem;
+  margin-left: 30px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* form */
+
+#form {
+  flex: 400px;
+}
+
+#mapJSON {
+  width: 100%;
+  padding: 8px;
+  overflow-x: hidden;
+  resize: none;
+  border-radius: 6px;
+  color: var(--color-fg);
+  background-color: var(--color-canvas);
+}
+
+button {
+  color: var(--color-bg);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type=submit] {
+  margin-top: 10px;
+  padding: 5px 16px;
+  background: var(--color-primary);
+  border: none;
+}
+
+button[type=submit]:hover {
+  background: var(--color-accent);
+}
+
+/* output code */
+
+pre {
+  margin: 0px;
+}
+
+#output {
+  width: 100%;
+  position: relative;
+  flex: 400px;
+  padding: 16px;
+  margin: 0px;
+  overflow-x: auto;
+  border-radius: 6px;
+  background-color: var(--color-canvas);
+}
+
+#copy {
+  all: initial;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: var(--color-btn);
+  cursor: pointer;
+}
+
+#copy:hover {
+  background-color: var(--color-btn-hover);
+}
+
+#copy:active {
+  background-color: var(--color-btn-active);
+}
+
+#output:hover>#copy {
+  display: inline;
+}

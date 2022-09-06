@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="/src/main.ts"></script>
+  <title>KrunkScript Deobfuscator</title>
+</head>
+
+<body>
+  <nav class="navigation-bar">
+    <img src="favicon.png" class="logo" alt="logo" width="100px" height="100px">
+    <header>KrunkScript Deobfuscator</header>
+  </nav>
+
+  <div class="flex-container">
+    <form id="form" action="#">
+      <textarea id="mapJSON" rows="15" autocomplete="off" placeholder="Enter map json or script" spellcheck="false"
+        required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="output">
+      <pre><code id="code"></code></pre>
+      <button id="copy" title="Copy"><img src="/src/assets/copy.svg" alt="copy" width="20px" height="20px"></button>
+    </div>
+  </div>
+
+</body>
+
+</html>
