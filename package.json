@@ -7,8 +7,7 @@
     "dev": "vite",
     "netlify": "netlify dev",
     "build": "tsc -noEmit && vite build",
-    "test": "uvu -r tsm",
-    "deploy": "npm build && npm test && netlify deploy --prod"
+    "test": "uvu -r tsm"
   },
   "dependencies": {
     "jscodeshift": "^0.13.1",
