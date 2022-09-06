@@ -4,6 +4,7 @@
 // @version      0.1
 // @author       j4k0xb
 // @match        https://krunker.io/*
+// @exclude      https://krunker.io/*.html*
 // @grant        none
 // ==/UserScript==
 
