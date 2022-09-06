@@ -4,7 +4,7 @@
 
 Deobfuscate and beautify compiled KrunkScript
 
-![screenshot](https://user-images.githubusercontent.com/55899582/188719075-d5121171-07dc-49b0-9da7-b292de39d131.png)
+![screenshot](https://user-images.githubusercontent.com/55899582/188747147-44ee146f-7d93-4920-996d-3972bd1cb8ef.png)
 
 ## Usage
 
@@ -19,6 +19,6 @@ Base URL: https://krunkscript-deobfuscator.netlify.app
 
 POST [/api/convert](https://krunkscript-deobfuscator.netlify.app/api/convert)
 
-The body has to contain the js client script of a hosted game (usually starts with `"use strict";`)
+The body has to contain the js client script of a hosted map (usually starts with `"use strict";`)
 
 See [here](./script.user.js) for an example.
