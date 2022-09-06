@@ -3,6 +3,7 @@
 // @description  Deobfuscate and beautify compiled KrunkScript
 // @version      0.1
 // @author       j4k0xb
+// @updateURL    https://github.com/j4k0xb/krunkscript-deobfuscator/raw/master/script.user.js
 // @match        https://krunker.io/*
 // @exclude      https://krunker.io/*.html*
 // @grant        none
