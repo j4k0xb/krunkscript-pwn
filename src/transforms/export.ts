@@ -3,9 +3,8 @@ import {
   exportNamedDeclaration,
   FunctionDeclaration,
 } from 'jscodeshift';
-import { ClientActions } from '../../@types/actions';
 
-const actions: (keyof ClientActions)[] = [
+const actions = [
   'onControllerHeld',
   'onControllerPress',
   'onControllerUp',
@@ -31,6 +30,6 @@ const actions: (keyof ClientActions)[] = [
 export function exportActions(ast: Collection) {
   ast
     .find(FunctionDeclaration)
-    .filter(path => actions.includes(path.node.id?.name as keyof ClientActions))
+    .filter(path => actions.includes(path.node.id?.name!))
     .replaceWith(path => exportNamedDeclaration(path.node));
 }
