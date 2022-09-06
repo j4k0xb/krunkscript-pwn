@@ -1,8 +1,8 @@
 # KrunkScript Deobfuscator
 
-Deobfuscate and beautify compiled KrunkScript
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7d6d9a70-6666-40a5-9f4c-7adfc59dbe1f/deploy-status)](https://app.netlify.com/sites/krunkscript-deobfuscator/deploys)
 
-## Screenshot
+Deobfuscate and beautify compiled KrunkScript
 
 ![screenshot](https://user-images.githubusercontent.com/55899582/188719075-d5121171-07dc-49b0-9da7-b292de39d131.png)
 
