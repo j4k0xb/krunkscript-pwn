@@ -1,19 +1,16 @@
 # KrunkScript Pwn
 
-Tools for messing with KrunkScript (requires [Tampermonkey](http://www.tampermonkey.net)).
+## Installation
 
-## Extractor
+1. Install [Tampermonkey](http://www.tampermonkey.net) for your browser.
+2. Add the [userscript](https://github.com/j4k0xb/krunkscript-pwn/raw/master/script.user.js).
 
-[install userscript](https://github.com/j4k0xb/krunkscript-pwn/raw/master/script.user.js)
+## Features
 
-Extracts, deobfuscates and beautifies compiled KrunkScript when you join a map with scripts.
+- Extract, deobfuscate and beautify compiled KrunkScript when you join a map with scripts.
 
-![screenshot](https://user-images.githubusercontent.com/55899582/188747147-44ee146f-7d93-4920-996d-3972bd1cb8ef.png)
+![website version](https://user-images.githubusercontent.com/55899582/188747147-44ee146f-7d93-4920-996d-3972bd1cb8ef.png)
 
-## Injector
-
-[install userscript](https://github.com/j4k0xb/krunkscript-pwn/raw/master/inject.user.js)
-
-- Read/modify global variables
-- Access everything from `GAME`
-- Inject own actions
+- Read/modify global variables.
+- Access everything from `GAME`.
+- Inject own actions.
