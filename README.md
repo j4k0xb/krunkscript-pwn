@@ -1,24 +1,19 @@
-# KrunkScript Deobfuscator
+# KrunkScript Pwn
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7d6d9a70-6666-40a5-9f4c-7adfc59dbe1f/deploy-status)](https://app.netlify.com/sites/krunkscript-deobfuscator/deploys)
+Tools for messing with KrunkScript (requires [Tampermonkey](http://www.tampermonkey.net)).
 
-Deobfuscate and beautify compiled KrunkScript
+## Extractor
+
+[install userscript](https://github.com/j4k0xb/krunkscript-pwn/raw/master/script.user.js)
+
+Extracts, deobfuscates and beautifies compiled KrunkScript when you join a map with scripts.
 
 ![screenshot](https://user-images.githubusercontent.com/55899582/188747147-44ee146f-7d93-4920-996d-3972bd1cb8ef.png)
 
-## Usage
+## Injector
 
-1. Install [Tampermonkey](http://www.tampermonkey.net) for your browser
-2. Add the [userscript](https://github.com/j4k0xb/krunkscript-deobfuscator/raw/master/script.user.js).
-3. Open the browser console and join a map with scripts
-4. The deobfuscated code will be logged
+[install userscript](https://github.com/j4k0xb/krunkscript-pwn/raw/master/inject.user.js)
 
-## API
-
-Base URL: https://krunkscript-deobfuscator.netlify.app
-
-POST [/api/convert](https://krunkscript-deobfuscator.netlify.app/api/convert)
-
-The body has to contain the js client script of a hosted map (usually starts with `"use strict";`)
-
-See [here](./script.user.js) for an example.
+- Read/modify global variables
+- Access everything from `GAME`
+- Inject own actions
