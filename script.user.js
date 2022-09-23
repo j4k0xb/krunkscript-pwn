@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KrunkScript pwn
 // @description  Extract/deobfuscate/hook/inject KrunkScript
-// @version      1.0.0
+// @version      1.0.1
 // @author       j4k0xb
 // @downloadURL  https://github.com/j4k0xb/krunkscript-pwn/raw/master/script.user.js
 // @updateURL    https://github.com/j4k0xb/krunkscript-pwn/raw/master/script.user.js
@@ -46,9 +46,11 @@ setTimeout(() => {
 }, 2000);
 
 function patchKrunkscript(map) {
-  map.scripts ??= {
-    client: `return{render:()=>{},onNetworkMessage:()=>{},onPlayerUpdate:()=>{},start:()=>{},update:()=>{},onPlayerSpawn:()=>{},onPlayerDeath:()=>{},onKeyPress:()=>{},onKeyUp:()=>{},onKeyHeld:()=>{},onMouseClick:()=>{},onMouseUp:()=>{},onMouseScroll:()=>{},onDIVClicked:()=>{}};`
-  };
+  if (!map.scripts?.client) {
+    map.scripts = {
+      client: `return{render:()=>{},onNetworkMessage:()=>{},onPlayerUpdate:()=>{},start:()=>{},update:()=>{},onPlayerSpawn:()=>{},onPlayerDeath:()=>{},onKeyPress:()=>{},onKeyUp:()=>{},onKeyHeld:()=>{},onMouseClick:()=>{},onMouseUp:()=>{},onMouseScroll:()=>{},onDIVClicked:()=>{}};`
+    };
+  }
   const script = map.scripts.client;
   const vars = script.match(/^(let.+\n)+/m)?.[0]?.match(/(?<=^let )\w+/gm) || [];
 
