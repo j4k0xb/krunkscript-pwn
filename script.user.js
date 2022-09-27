@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KrunkScript pwn
 // @description  Extract/deobfuscate/hook/inject KrunkScript
-// @version      1.0.1
+// @version      1.0.2
 // @author       j4k0xb
 // @downloadURL  https://github.com/j4k0xb/krunkscript-pwn/raw/master/script.user.js
 // @updateURL    https://github.com/j4k0xb/krunkscript-pwn/raw/master/script.user.js
@@ -15,14 +15,14 @@
 // USAGE:
 // read global variables: krnk.getVars()
 // modify them: krnk.eval('V_someVar = 100')
-// access everything from GAME: krnk.V_PLAYERS.V_list()
+// access everything from GAME: krnk.V_NETWORK.V_send('id', { V_someData: 1 })
 
 // inject your own actions that run additionally
 const actions = {
   render(delta) {
     const { V_width, V_height } = krnk.V_OVERLAY.V_getSize();
     for (const player of krnk.V_PLAYERS.V_list()) {
-      if (player.V_isYou || player.V_health <= 0) continue;
+      if (player.V_isYou || !player.V_active) continue;
       const pos = krnk.V_SCENE.V_posToScreen(player.V_position.V_x, player.V_position.V_y, player.V_position.V_z);
       if (!pos.V_onScreen) continue;
       krnk.V_OVERLAY.V_drawLine(V_width / 2, V_height / 2, pos.V_x, pos.V_y, 2, '#ff0000', 0.8);
