@@ -1,5 +1,7 @@
 # KrunkScript Pwn
 
+No longer works because JSON.parse can't be hooked.
+
 ## Installation
 
 1. Install [Tampermonkey](http://www.tampermonkey.net) for your browser.
