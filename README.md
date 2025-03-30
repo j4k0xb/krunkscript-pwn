@@ -25,3 +25,13 @@ Userscript no longer works because JSON.parse can't be hooked.
 - Read/modify global variables.
 - Access everything from `GAME`.
 - Inject own actions.
+
+## How To Download Scripts
+
+1. Use a chromium based browser
+2. Open the developer console (F12)
+3. Execute `queryObjects(Function.prototype)` (this may take a while)
+4. Right-click on the resulting array and select "Store as global variable"
+5. Execute `temp1.find(f=>{try{return f.toString().includes('V_start')}catch{}}).toString()`
+6. Right-click on the resulting code on select "Copy string contents"
+
