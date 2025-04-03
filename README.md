@@ -28,10 +28,10 @@ Userscript no longer works because JSON.parse can't be hooked.
 
 ## How To Download Scripts
 
-1. Use a chromium based browser
-2. Open the developer console (F12)
-3. Execute `queryObjects(Function.prototype)` (this may take a while)
-4. Right-click on the resulting array and select "Store as global variable"
-5. Execute `temp1.find(f=>{try{return f.toString().includes('V_start')}catch{}}).toString()`
-6. Right-click on the resulting code on select "Copy string contents"
-
+1. Join a map with scripts
+2. Use a chromium based browser
+3. Open the developer console (F12)
+4. Execute `queryObjects(Function.prototype)` (this may take a while)
+5. Right-click on the resulting array and select "Store as global variable"
+6. Execute `temp1.find(f=>f.name==='V_start')`
+7. Click on the function to see the whole script in the sources tab
