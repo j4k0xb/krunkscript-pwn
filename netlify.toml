@@ -14,7 +14,6 @@ to = '/index.html'
 
 [build]
 command = 'npm run build'
-environment = {NODE_VERSION = '16'}
 publish = 'dist'
 
 [dev]

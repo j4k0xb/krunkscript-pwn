@@ -4,7 +4,7 @@
   "author": "j4k0xb",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite",
     "netlify": "netlify dev",
     "build": "tsc -noEmit && vite build",
     "test": "uvu -r tsm"
